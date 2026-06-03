@@ -1,0 +1,12 @@
+{
+  "name": "query-traces",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "check": "tsc -b tsconfig.json",
+    "start": "tsx src/index.ts",
+    "test": "vitest run --passWithNoTests"
+  }
+}

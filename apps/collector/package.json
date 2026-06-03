@@ -1,11 +1,43 @@
 {
   "name": "@open-agent-recorder/collector",
   "version": "0.1.0",
-  "description": "Local HTTP collector for Open Agent Recorder events.",
+  "description": "Local HTTP collector for Open Agent Recorder events. Run with `npx @open-agent-recorder/collector`.",
   "license": "Apache-2.0",
   "type": "module",
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
+  "bin": {
+    "open-agent-recorder-collector": "./dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "agent",
+    "llm",
+    "observability",
+    "tracing",
+    "recorder",
+    "collector"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safriyandi/open-agent-recorder.git",
+    "directory": "apps/collector"
+  },
+  "bugs": {
+    "url": "https://github.com/safriyandi/open-agent-recorder/issues"
+  },
+  "homepage": "https://github.com/safriyandi/open-agent-recorder#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "tsc -b tsconfig.json",
     "check": "tsc -b tsconfig.json",
@@ -14,6 +46,12 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@open-agent-recorder/core": "workspace:*"
+    "@open-agent-recorder/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7"
+  },
+  "peerDependencies": {
+    "@open-agent-recorder/core": "^0.1.0"
   }
 }

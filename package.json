@@ -2,19 +2,52 @@
   "name": "open-agent-recorder",
   "version": "0.1.0",
   "private": true,
-  "description": "Open source flight recorder for AI agents and LLM applications.",
+  "description": "Open source flight recorder for AI agents and LLM applications. Capture model calls, tools and traces.",
   "license": "Apache-2.0",
   "type": "module",
   "packageManager": "pnpm@9.15.4",
+  "keywords": [
+    "ai",
+    "agent",
+    "llm",
+    "observability",
+    "tracing",
+    "recorder",
+    "redaction",
+    "privacy",
+    "flight-recorder",
+    "open-telemetry",
+    "model-calls",
+    "tool-calls"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safriyandi/open-agent-recorder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/safriyandi/open-agent-recorder/issues"
+  },
+  "homepage": "https://github.com/safriyandi/open-agent-recorder#readme",
   "scripts": {
     "build": "pnpm -r build",
     "check": "pnpm -r check",
     "dev:collector": "pnpm --filter @open-agent-recorder/collector dev",
     "example:node": "pnpm --filter node-basic start",
-    "test": "pnpm -r test"
+    "example:query": "pnpm --filter query-traces start",
+    "example:inspect": "pnpm --filter inspect-jsonl start",
+    "test": "pnpm -r test",
+    "test:ci": "pnpm check && pnpm test && pnpm build",
+    "release": "pnpm build && pnpm -r publish --access public"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/node": "^22.10.7",
+    "semantic-release": "^24.2.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vitest": "^2.1.8"

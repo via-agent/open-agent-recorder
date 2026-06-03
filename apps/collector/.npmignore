@@ -1,0 +1,5 @@
+*.tsbuildinfo
+*.d.ts.map
+*.test.js
+*.test.d.ts
+src/

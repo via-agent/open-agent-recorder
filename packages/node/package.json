@@ -12,12 +12,45 @@
       "default": "./dist/index.js"
     }
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "agent",
+    "llm",
+    "observability",
+    "tracing",
+    "recorder",
+    "node",
+    "client"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safriyandi/open-agent-recorder.git",
+    "directory": "packages/node"
+  },
+  "bugs": {
+    "url": "https://github.com/safriyandi/open-agent-recorder/issues"
+  },
+  "homepage": "https://github.com/safriyandi/open-agent-recorder#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "tsc -b tsconfig.json",
     "check": "tsc -b tsconfig.json",
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@open-agent-recorder/core": "workspace:*"
+    "@open-agent-recorder/core": "workspace:^"
+  },
+  "peerDependencies": {
+    "@open-agent-recorder/core": "^0.1.0"
   }
 }
