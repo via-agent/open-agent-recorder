@@ -1,0 +1,19 @@
+{
+  "name": "@open-agent-recorder/collector",
+  "version": "0.1.0",
+  "description": "Local HTTP collector for Open Agent Recorder events.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "check": "tsc -b tsconfig.json",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@open-agent-recorder/core": "workspace:*"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@open-agent-recorder/core",
+  "version": "0.1.0",
+  "description": "Core trace types and recorder primitives for Open Agent Recorder.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "check": "tsc -b tsconfig.json",
+    "test": "vitest run"
+  }
+}
